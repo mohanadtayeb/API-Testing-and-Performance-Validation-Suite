@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="API Test Suite" tests="2" failures="0" errors="1" time="3.953">
+  <testsuite name="JSONPlaceholder API Tests" tests="58" failures="0" time="3.077">
+    <testcase name="assertStatusCode" time="0">
+    </testcase>
+    <testcase name="assertTrue" time="0">
+    </testcase>
+    <testcase name="assertEqual" time="0">
+    </testcase>
+    <testcase name="assertResponseTime" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertStatusCode" time="0">
+    </testcase>
+    <testcase name="assertEqual" time="0">
+    </testcase>
+    <testcase name="assertJsonStructure" time="0">
+    </testcase>
+    <testcase name="assertTrue" time="0">
+    </testcase>
+    <testcase name="assertStatusCode" time="0">
+    </testcase>
+    <testcase name="assertEqual" time="0">
+    </testcase>
+    <testcase name="assertEqual" time="0">
+    </testcase>
+    <testcase name="assertEqual" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertStatusCode" time="0">
+    </testcase>
+    <testcase name="assertEqual" time="0">
+    </testcase>
+    <testcase name="assertEqual" time="0">
+    </testcase>
+    <testcase name="assertEqual" time="0">
+    </testcase>
+    <testcase name="assertStatusCode" time="0">
+    </testcase>
+    <testcase name="assertTrue" time="0">
+    </testcase>
+    <testcase name="assertStatusCode" time="0">
+    </testcase>
+    <testcase name="assertTrue" time="0">
+    </testcase>
+    <testcase name="assertEqual" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertStatusCode" time="0">
+    </testcase>
+    <testcase name="assertTrue" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertTrue" time="0">
+    </testcase>
+    <testcase name="assertTrue" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertStatusCode" time="0">
+    </testcase>
+    <testcase name="assertTrue" time="0">
+    </testcase>
+    <testcase name="assertEqual" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertTrue" time="0">
+    </testcase>
+    <testcase name="assertStatusCode" time="0">
+    </testcase>
+    <testcase name="assertTrue" time="0">
+    </testcase>
+    <testcase name="assertTrue" time="0">
+    </testcase>
+    <testcase name="assertStatusCode" time="0">
+    </testcase>
+    <testcase name="assertEqual" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="ReqRes API Tests" tests="4" failures="2" time="0.875">
+    <testcase name="assertTrue" time="0">
+    </testcase>
+    <testcase name="assertStatusCode" time="0">
+      <failure message="Should return 400 Bad Request">assertStatusCode: Expected 400, but got 401</failure>
+    </testcase>
+    <testcase name="assertNotNull" time="0">
+    </testcase>
+    <testcase name="assertEqual" time="0">
+      <failure message="Should specify missing password error">assertEqual: Expected Missing API key, but got Missing password</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

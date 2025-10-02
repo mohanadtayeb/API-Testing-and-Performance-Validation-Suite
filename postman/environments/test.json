@@ -1,0 +1,57 @@
+{
+	"id": "test-environment",
+	"name": "Test Environment",
+	"values": [
+		{
+			"key": "jsonplaceholder_baseUrl",
+			"value": "https://jsonplaceholder.typicode.com",
+			"enabled": true
+		},
+		{
+			"key": "reqres_baseUrl",
+			"value": "https://reqres.in/api",
+			"enabled": true
+		},
+		{
+			"key": "postman_echo_baseUrl",
+			"value": "https://postman-echo.com",
+			"enabled": true
+		},
+		{
+			"key": "local_api_baseUrl",
+			"value": "http://localhost:3000/api",
+			"enabled": true
+		},
+		{
+			"key": "authToken",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "createdPostId",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "createdUserId",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "firstPostId",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "testEmail",
+			"value": "test@example.com",
+			"enabled": true
+		},
+		{
+			"key": "testPassword",
+			"value": "testpassword123",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment"
+}

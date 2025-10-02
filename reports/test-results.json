@@ -1,0 +1,599 @@
+{
+  "summary": {
+    "totalTests": 2,
+    "passedTests": 1,
+    "failedTests": 0,
+    "errorTests": 1,
+    "duration": 3953,
+    "successRate": 50,
+    "startTime": 1759409522066,
+    "endTime": 1759409526019
+  },
+  "config": {
+    "environment": "development",
+    "startTime": "2025-10-02T12:52:02.066Z",
+    "endTime": "2025-10-02T12:52:06.019Z",
+    "duration": 3953
+  },
+  "results": [
+    {
+      "name": "JSONPlaceholder API Tests",
+      "description": "Comprehensive testing of JSONPlaceholder API endpoints",
+      "status": "PASSED",
+      "executionTime": 3077,
+      "totalAssertions": 58,
+      "passedAssertions": 58,
+      "failedAssertions": 0,
+      "successRate": 100,
+      "errors": [],
+      "warnings": [],
+      "results": [
+        {
+          "assertion": "assertStatusCode",
+          "expected": 200,
+          "actual": 200,
+          "passed": true,
+          "message": "Should return 200 OK",
+          "timestamp": "2025-10-02T12:52:02.385Z"
+        },
+        {
+          "assertion": "assertTrue",
+          "expected": "true",
+          "actual": true,
+          "passed": true,
+          "message": "Response should be an array",
+          "timestamp": "2025-10-02T12:52:02.385Z"
+        },
+        {
+          "assertion": "assertEqual",
+          "expected": 100,
+          "actual": 100,
+          "passed": true,
+          "message": "Should return 100 posts",
+          "timestamp": "2025-10-02T12:52:02.385Z"
+        },
+        {
+          "assertion": "assertResponseTime",
+          "expected": "<= 2000ms",
+          "actual": "316ms",
+          "passed": true,
+          "message": "Response time should be under 2 seconds",
+          "timestamp": "2025-10-02T12:52:02.386Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": 1,
+          "passed": true,
+          "message": "Post should have userId",
+          "timestamp": "2025-10-02T12:52:02.386Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": 1,
+          "passed": true,
+          "message": "Post should have id",
+          "timestamp": "2025-10-02T12:52:02.386Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+          "passed": true,
+          "message": "Post should have title",
+          "timestamp": "2025-10-02T12:52:02.386Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+          "passed": true,
+          "message": "Post should have body",
+          "timestamp": "2025-10-02T12:52:02.386Z"
+        },
+        {
+          "assertion": "assertStatusCode",
+          "expected": 200,
+          "actual": 200,
+          "passed": true,
+          "message": "Should return 200 OK",
+          "timestamp": "2025-10-02T12:52:02.610Z"
+        },
+        {
+          "assertion": "assertEqual",
+          "expected": 1,
+          "actual": 1,
+          "passed": true,
+          "message": "Returned post ID should match requested ID",
+          "timestamp": "2025-10-02T12:52:02.610Z"
+        },
+        {
+          "assertion": "assertJsonStructure",
+          "expected": "valid structure",
+          "actual": true,
+          "passed": true,
+          "message": "Post should have correct structure",
+          "timestamp": "2025-10-02T12:52:02.610Z"
+        },
+        {
+          "assertion": "assertTrue",
+          "expected": "true",
+          "actual": true,
+          "passed": true,
+          "message": "Correctly returned 404 for non-existent post",
+          "timestamp": "2025-10-02T12:52:02.830Z"
+        },
+        {
+          "assertion": "assertStatusCode",
+          "expected": 201,
+          "actual": 201,
+          "passed": true,
+          "message": "Should return 201 Created",
+          "timestamp": "2025-10-02T12:52:03.158Z"
+        },
+        {
+          "assertion": "assertEqual",
+          "expected": "Test Post Title",
+          "actual": "Test Post Title",
+          "passed": true,
+          "message": "Title should match",
+          "timestamp": "2025-10-02T12:52:03.158Z"
+        },
+        {
+          "assertion": "assertEqual",
+          "expected": "This is a test post created by automated testing",
+          "actual": "This is a test post created by automated testing",
+          "passed": true,
+          "message": "Body should match",
+          "timestamp": "2025-10-02T12:52:03.158Z"
+        },
+        {
+          "assertion": "assertEqual",
+          "expected": 1,
+          "actual": 1,
+          "passed": true,
+          "message": "UserId should match",
+          "timestamp": "2025-10-02T12:52:03.158Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": 101,
+          "passed": true,
+          "message": "Created post should have an ID",
+          "timestamp": "2025-10-02T12:52:03.158Z"
+        },
+        {
+          "assertion": "assertStatusCode",
+          "expected": 200,
+          "actual": 200,
+          "passed": true,
+          "message": "Should return 200 OK",
+          "timestamp": "2025-10-02T12:52:03.688Z"
+        },
+        {
+          "assertion": "assertEqual",
+          "expected": "Updated Test Post Title",
+          "actual": "Updated Test Post Title",
+          "passed": true,
+          "message": "Title should be updated",
+          "timestamp": "2025-10-02T12:52:03.688Z"
+        },
+        {
+          "assertion": "assertEqual",
+          "expected": "This post has been updated via automated testing",
+          "actual": "This post has been updated via automated testing",
+          "passed": true,
+          "message": "Body should be updated",
+          "timestamp": "2025-10-02T12:52:03.688Z"
+        },
+        {
+          "assertion": "assertEqual",
+          "expected": 1,
+          "actual": 1,
+          "passed": true,
+          "message": "ID should remain the same",
+          "timestamp": "2025-10-02T12:52:03.688Z"
+        },
+        {
+          "assertion": "assertStatusCode",
+          "expected": 200,
+          "actual": 200,
+          "passed": true,
+          "message": "Should return 200 OK",
+          "timestamp": "2025-10-02T12:52:04.020Z"
+        },
+        {
+          "assertion": "assertTrue",
+          "expected": "true",
+          "actual": true,
+          "passed": true,
+          "message": "Delete should return empty object",
+          "timestamp": "2025-10-02T12:52:04.020Z"
+        },
+        {
+          "assertion": "assertStatusCode",
+          "expected": 200,
+          "actual": 200,
+          "passed": true,
+          "message": "Should return 200 OK",
+          "timestamp": "2025-10-02T12:52:04.248Z"
+        },
+        {
+          "assertion": "assertTrue",
+          "expected": "true",
+          "actual": true,
+          "passed": true,
+          "message": "Response should be an array",
+          "timestamp": "2025-10-02T12:52:04.248Z"
+        },
+        {
+          "assertion": "assertEqual",
+          "expected": 10,
+          "actual": 10,
+          "passed": true,
+          "message": "Should return 10 users",
+          "timestamp": "2025-10-02T12:52:04.248Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": 1,
+          "passed": true,
+          "message": "User should have id",
+          "timestamp": "2025-10-02T12:52:04.248Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "Leanne Graham",
+          "passed": true,
+          "message": "User should have name",
+          "timestamp": "2025-10-02T12:52:04.248Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "Bret",
+          "passed": true,
+          "message": "User should have username",
+          "timestamp": "2025-10-02T12:52:04.248Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "Sincere@april.biz",
+          "passed": true,
+          "message": "User should have email",
+          "timestamp": "2025-10-02T12:52:04.248Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+              "lat": "-37.3159",
+              "lng": "81.1496"
+            }
+          },
+          "passed": true,
+          "message": "User should have address",
+          "timestamp": "2025-10-02T12:52:04.248Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "1-770-736-8031 x56442",
+          "passed": true,
+          "message": "User should have phone",
+          "timestamp": "2025-10-02T12:52:04.248Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "hildegard.org",
+          "passed": true,
+          "message": "User should have website",
+          "timestamp": "2025-10-02T12:52:04.248Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+          },
+          "passed": true,
+          "message": "User should have company",
+          "timestamp": "2025-10-02T12:52:04.248Z"
+        },
+        {
+          "assertion": "assertStatusCode",
+          "expected": 200,
+          "actual": 200,
+          "passed": true,
+          "message": "Should return 200 OK",
+          "timestamp": "2025-10-02T12:52:04.486Z"
+        },
+        {
+          "assertion": "assertTrue",
+          "expected": "true",
+          "actual": true,
+          "passed": true,
+          "message": "Email should be in valid format",
+          "timestamp": "2025-10-02T12:52:04.486Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "Kulas Light",
+          "passed": true,
+          "message": "Address should have street",
+          "timestamp": "2025-10-02T12:52:04.486Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "Gwenborough",
+          "passed": true,
+          "message": "Address should have city",
+          "timestamp": "2025-10-02T12:52:04.486Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "92998-3874",
+          "passed": true,
+          "message": "Address should have zipcode",
+          "timestamp": "2025-10-02T12:52:04.486Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": {
+            "lat": "-37.3159",
+            "lng": "81.1496"
+          },
+          "passed": true,
+          "message": "Address should have geo coordinates",
+          "timestamp": "2025-10-02T12:52:04.486Z"
+        },
+        {
+          "assertion": "assertTrue",
+          "expected": "true",
+          "actual": true,
+          "passed": true,
+          "message": "Latitude should be between -90 and 90",
+          "timestamp": "2025-10-02T12:52:04.486Z"
+        },
+        {
+          "assertion": "assertTrue",
+          "expected": "true",
+          "actual": true,
+          "passed": true,
+          "message": "Longitude should be between -180 and 180",
+          "timestamp": "2025-10-02T12:52:04.486Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "Romaguera-Crona",
+          "passed": true,
+          "message": "Company should have name",
+          "timestamp": "2025-10-02T12:52:04.486Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "Multi-layered client-server neural-net",
+          "passed": true,
+          "message": "Company should have catchPhrase",
+          "timestamp": "2025-10-02T12:52:04.486Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "harness real-time e-markets",
+          "passed": true,
+          "message": "Company should have bs",
+          "timestamp": "2025-10-02T12:52:04.486Z"
+        },
+        {
+          "assertion": "assertStatusCode",
+          "expected": 200,
+          "actual": 200,
+          "passed": true,
+          "message": "Should return 200 OK",
+          "timestamp": "2025-10-02T12:52:04.714Z"
+        },
+        {
+          "assertion": "assertTrue",
+          "expected": "true",
+          "actual": true,
+          "passed": true,
+          "message": "Response should be an array",
+          "timestamp": "2025-10-02T12:52:04.714Z"
+        },
+        {
+          "assertion": "assertEqual",
+          "expected": 1,
+          "actual": 1,
+          "passed": true,
+          "message": "Comment should belong to correct post",
+          "timestamp": "2025-10-02T12:52:04.714Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": 1,
+          "passed": true,
+          "message": "Comment should have id",
+          "timestamp": "2025-10-02T12:52:04.714Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "id labore ex et quam laborum",
+          "passed": true,
+          "message": "Comment should have name",
+          "timestamp": "2025-10-02T12:52:04.714Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "Eliseo@gardner.biz",
+          "passed": true,
+          "message": "Comment should have email",
+          "timestamp": "2025-10-02T12:52:04.714Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium",
+          "passed": true,
+          "message": "Comment should have body",
+          "timestamp": "2025-10-02T12:52:04.714Z"
+        },
+        {
+          "assertion": "assertTrue",
+          "expected": "true",
+          "actual": true,
+          "passed": true,
+          "message": "Comment email should be in valid format",
+          "timestamp": "2025-10-02T12:52:04.714Z"
+        },
+        {
+          "assertion": "assertStatusCode",
+          "expected": 200,
+          "actual": 200,
+          "passed": true,
+          "message": "Should return 200 OK",
+          "timestamp": "2025-10-02T12:52:04.931Z"
+        },
+        {
+          "assertion": "assertTrue",
+          "expected": "true",
+          "actual": true,
+          "passed": true,
+          "message": "Response should be an array",
+          "timestamp": "2025-10-02T12:52:04.931Z"
+        },
+        {
+          "assertion": "assertTrue",
+          "expected": "true",
+          "actual": true,
+          "passed": true,
+          "message": "All posts should belong to the specified user",
+          "timestamp": "2025-10-02T12:52:04.931Z"
+        },
+        {
+          "assertion": "assertStatusCode",
+          "expected": 200,
+          "actual": 200,
+          "passed": true,
+          "message": "Should return 200 OK",
+          "timestamp": "2025-10-02T12:52:05.144Z"
+        },
+        {
+          "assertion": "assertEqual",
+          "expected": 5,
+          "actual": 5,
+          "passed": true,
+          "message": "Should return exactly 5 posts",
+          "timestamp": "2025-10-02T12:52:05.144Z"
+        }
+      ],
+      "data": {
+        "firstPostId": 1,
+        "firstPostUserId": 1,
+        "createdPostId": 101
+      },
+      "tags": [
+        "api",
+        "crud",
+        "jsonplaceholder"
+      ],
+      "startTime": 1759409522067,
+      "endTime": 1759409525144,
+      "timestamp": "2025-10-02T12:52:05.144Z"
+    },
+    {
+      "name": "ReqRes API Tests",
+      "description": "Authentication and user management testing for ReqRes API",
+      "status": "ERROR",
+      "executionTime": 875,
+      "totalAssertions": 4,
+      "passedAssertions": 2,
+      "failedAssertions": 2,
+      "successRate": 50,
+      "errors": [
+        {
+          "message": "Assertion failed: assertStatusCode. Expected: 400, Actual: 401. Should return 400 Bad Request",
+          "timestamp": "2025-10-02T12:52:05.767Z"
+        },
+        {
+          "message": "Assertion failed: assertEqual. Expected: Missing API key, Actual: Missing password. Should specify missing password error",
+          "timestamp": "2025-10-02T12:52:05.767Z"
+        },
+        {
+          "message": "Request failed with status code 401",
+          "timestamp": "2025-10-02T12:52:06.019Z"
+        }
+      ],
+      "warnings": [],
+      "results": [
+        {
+          "assertion": "assertTrue",
+          "expected": "true",
+          "actual": true,
+          "passed": true,
+          "message": "API endpoint requires authentication - test gracefully handled",
+          "timestamp": "2025-10-02T12:52:05.463Z"
+        },
+        {
+          "assertion": "assertStatusCode",
+          "expected": 400,
+          "actual": 401,
+          "passed": false,
+          "message": "Should return 400 Bad Request",
+          "timestamp": "2025-10-02T12:52:05.767Z"
+        },
+        {
+          "assertion": "assertNotNull",
+          "expected": "not null",
+          "actual": "Missing API key",
+          "passed": true,
+          "message": "Should return error message",
+          "timestamp": "2025-10-02T12:52:05.767Z"
+        },
+        {
+          "assertion": "assertEqual",
+          "expected": "Missing API key",
+          "actual": "Missing password",
+          "passed": false,
+          "message": "Should specify missing password error",
+          "timestamp": "2025-10-02T12:52:05.767Z"
+        }
+      ],
+      "data": {
+        "authToken": "dummy_token_for_demo",
+        "userId": "demo_user_id"
+      },
+      "tags": [
+        "api",
+        "auth",
+        "pagination",
+        "reqres"
+      ],
+      "startTime": 1759409525144,
+      "endTime": 1759409526019,
+      "timestamp": "2025-10-02T12:52:06.019Z"
+    }
+  ]
+}

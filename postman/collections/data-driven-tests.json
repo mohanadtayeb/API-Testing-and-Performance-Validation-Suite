@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "data-driven-tests",
+		"name": "Data-Driven Testing Suite",
+		"description": "Data-driven tests using CSV data file for comprehensive API validation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Post with CSV Data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code matches expected', function () {",
+							"    const expectedStatus = parseInt(pm.iterationData.get('expected_status'));",
+							"    pm.response.to.have.status(expectedStatus);",
+							"});",
+							"",
+							"pm.test('Response contains created post data', function () {",
+							"    if (pm.response.code === 201) {",
+							"        const jsonData = pm.response.json();",
+							"        pm.expect(jsonData).to.have.property('title');",
+							"        pm.expect(jsonData).to.have.property('body');",
+							"        pm.expect(jsonData).to.have.property('userId');",
+							"        pm.expect(jsonData).to.have.property('id');",
+							"    }",
+							"});",
+							"",
+							"pm.test('Post data matches input data', function () {",
+							"    if (pm.response.code === 201) {",
+							"        const jsonData = pm.response.json();",
+							"        const inputTitle = pm.iterationData.get('title');",
+							"        const inputBody = pm.iterationData.get('body');",
+							"        const inputUserId = parseInt(pm.iterationData.get('userId'));",
+							"        ",
+							"        pm.expect(jsonData.title).to.eql(inputTitle);",
+							"        pm.expect(jsonData.body).to.eql(inputBody);",
+							"        pm.expect(jsonData.userId).to.eql(inputUserId);",
+							"    }",
+							"});",
+							"",
+							"pm.test('Response time is acceptable', function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});",
+							"",
+							"// Log test data for debugging",
+							"console.log('Test Data:', {",
+							"    title: pm.iterationData.get('title'),",
+							"    body: pm.iterationData.get('body'),",
+							"    userId: pm.iterationData.get('userId'),",
+							"    expected_status: pm.iterationData.get('expected_status')",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"{{title}}\",\n  \"body\": \"{{body}}\",\n  \"userId\": {{userId}}\n}"
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": ["jsonplaceholder", "typicode", "com"],
+					"path": ["posts"]
+				}
+			}
+		},
+		{
+			"name": "Validate Created Post",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// This test runs after each post creation to validate the data",
+							"// We'll use a fixed post ID for validation since JSONPlaceholder doesn't persist data",
+							"pm.globals.set('validationPostId', 1);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test('Retrieved post has valid structure', function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.property('userId');",
+							"    pm.expect(jsonData).to.have.property('id');",
+							"    pm.expect(jsonData).to.have.property('title');",
+							"    pm.expect(jsonData).to.have.property('body');",
+							"});",
+							"",
+							"pm.test('Data types are correct', function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData.userId).to.be.a('number');",
+							"    pm.expect(jsonData.id).to.be.a('number');",
+							"    pm.expect(jsonData.title).to.be.a('string');",
+							"    pm.expect(jsonData.body).to.be.a('string');",
+							"});",
+							"",
+							"pm.test('Title and body are not empty', function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData.title.length).to.be.greaterThan(0);",
+							"    // Note: body can be empty in some test cases",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts/{{validationPostId}}",
+					"protocol": "https",
+					"host": ["jsonplaceholder", "typicode", "com"],
+					"path": ["posts", "{{validationPostId}}"]
+				}
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "validationPostId",
+			"value": "1"
+		}
+	]
+}

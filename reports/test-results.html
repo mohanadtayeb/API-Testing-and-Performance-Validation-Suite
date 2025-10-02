@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f5f5f5; }
+        .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header { text-align: center; border-bottom: 3px solid #2196F3; padding-bottom: 20px; margin-bottom: 30px; }
+        .header h1 { color: #2196F3; margin: 0; }
+        .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .summary-card { padding: 20px; border-radius: 8px; text-align: center; color: white; }
+        .summary-card h3 { margin: 0 0 10px 0; }
+        .summary-card p { margin: 0; font-size: 24px; font-weight: bold; }
+        .total { background: #2196F3; }
+        .passed { background: #4CAF50; }
+        .failed { background: #F44336; }
+        .error { background: #FF9800; }
+        .duration { background: #9C27B0; }
+        .success-rate { background: #607D8B; }
+        .test-result { margin: 20px 0; padding: 20px; border-radius: 8px; border-left: 5px solid; }
+        .test-result.PASSED { border-left-color: #4CAF50; background-color: #E8F5E8; }
+        .test-result.FAILED { border-left-color: #F44336; background-color: #FFEBEE; }
+        .test-result.ERROR { border-left-color: #FF9800; background-color: #FFF3E0; }
+        .test-details { margin-top: 15px; font-size: 14px; }
+        .assertion { margin: 5px 0; padding: 8px; border-radius: 4px; }
+        .assertion.passed { background-color: #C8E6C9; }
+        .assertion.failed { background-color: #FFCDD2; }
+        .error-list { background-color: #FFECB3; padding: 10px; border-radius: 4px; margin-top: 10px; }
+        .tags { margin-top: 10px; }
+        .tag { display: inline-block; background: #E3F2FD; color: #1976D2; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧪 API Test Results</h1>
+            <p>Generated on: 2025-10-02T12:52:06.020Z</p>
+            <p>Environment: development</p>
+        </div>
+        
+        <div class="summary">
+            <div class="summary-card total">
+                <h3>Total Tests</h3>
+                <p>2</p>
+            </div>
+            <div class="summary-card passed">
+                <h3>Passed</h3>
+                <p>1</p>
+            </div>
+            <div class="summary-card failed">
+                <h3>Failed</h3>
+                <p>0</p>
+            </div>
+            <div class="summary-card error">
+                <h3>Errors</h3>
+                <p>1</p>
+            </div>
+            <div class="summary-card duration">
+                <h3>Duration</h3>
+                <p>4.0s</p>
+            </div>
+            <div class="summary-card success-rate">
+                <h3>Success Rate</h3>
+                <p>50.0%</p>
+            </div>
+        </div>
+        
+        <h2>Test Results</h2>
+        
+            <div class="test-result PASSED">
+                <h3>JSONPlaceholder API Tests</h3>
+                <p><strong>Status:</strong> PASSED</p>
+                <p><strong>Duration:</strong> 3077ms</p>
+                <p><strong>Assertions:</strong> 58/58 passed</p>
+                
+                <p><strong>Description:</strong> Comprehensive testing of JSONPlaceholder API endpoints</p>
+                
+                
+                    <div class="tags">
+                        <strong>Tags:</strong> <span class="tag">api</span><span class="tag">crud</span><span class="tag">jsonplaceholder</span>
+                    </div>
+                
+                
+                
+                
+                <div class="test-details">
+                    <strong>Assertions:</strong>
+                    
+                        <div class="assertion passed">
+                            assertStatusCode: ✅ 
+                            Should return 200 OK
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertTrue: ✅ 
+                            Response should be an array
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertEqual: ✅ 
+                            Should return 100 posts
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertResponseTime: ✅ 
+                            Response time should be under 2 seconds
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Post should have userId
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Post should have id
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Post should have title
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Post should have body
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertStatusCode: ✅ 
+                            Should return 200 OK
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertEqual: ✅ 
+                            Returned post ID should match requested ID
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertJsonStructure: ✅ 
+                            Post should have correct structure
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertTrue: ✅ 
+                            Correctly returned 404 for non-existent post
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertStatusCode: ✅ 
+                            Should return 201 Created
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertEqual: ✅ 
+                            Title should match
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertEqual: ✅ 
+                            Body should match
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertEqual: ✅ 
+                            UserId should match
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Created post should have an ID
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertStatusCode: ✅ 
+                            Should return 200 OK
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertEqual: ✅ 
+                            Title should be updated
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertEqual: ✅ 
+                            Body should be updated
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertEqual: ✅ 
+                            ID should remain the same
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertStatusCode: ✅ 
+                            Should return 200 OK
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertTrue: ✅ 
+                            Delete should return empty object
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertStatusCode: ✅ 
+                            Should return 200 OK
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertTrue: ✅ 
+                            Response should be an array
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertEqual: ✅ 
+                            Should return 10 users
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            User should have id
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            User should have name
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            User should have username
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            User should have email
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            User should have address
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            User should have phone
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            User should have website
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            User should have company
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertStatusCode: ✅ 
+                            Should return 200 OK
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertTrue: ✅ 
+                            Email should be in valid format
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Address should have street
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Address should have city
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Address should have zipcode
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Address should have geo coordinates
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertTrue: ✅ 
+                            Latitude should be between -90 and 90
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertTrue: ✅ 
+                            Longitude should be between -180 and 180
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Company should have name
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Company should have catchPhrase
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Company should have bs
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertStatusCode: ✅ 
+                            Should return 200 OK
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertTrue: ✅ 
+                            Response should be an array
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertEqual: ✅ 
+                            Comment should belong to correct post
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Comment should have id
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Comment should have name
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Comment should have email
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Comment should have body
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertTrue: ✅ 
+                            Comment email should be in valid format
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertStatusCode: ✅ 
+                            Should return 200 OK
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertTrue: ✅ 
+                            Response should be an array
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertTrue: ✅ 
+                            All posts should belong to the specified user
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertStatusCode: ✅ 
+                            Should return 200 OK
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertEqual: ✅ 
+                            Should return exactly 5 posts
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="test-result ERROR">
+                <h3>ReqRes API Tests</h3>
+                <p><strong>Status:</strong> ERROR</p>
+                <p><strong>Duration:</strong> 875ms</p>
+                <p><strong>Assertions:</strong> 2/4 passed</p>
+                
+                <p><strong>Description:</strong> Authentication and user management testing for ReqRes API</p>
+                
+                
+                    <div class="tags">
+                        <strong>Tags:</strong> <span class="tag">api</span><span class="tag">auth</span><span class="tag">pagination</span><span class="tag">reqres</span>
+                    </div>
+                
+                
+                
+                    <div class="error-list">
+                        <strong>Errors:</strong>
+                        <ul>
+                            <li>Assertion failed: assertStatusCode. Expected: 400, Actual: 401. Should return 400 Bad Request</li><li>Assertion failed: assertEqual. Expected: Missing API key, Actual: Missing password. Should specify missing password error</li><li>Request failed with status code 401</li>
+                        </ul>
+                    </div>
+                
+                
+                <div class="test-details">
+                    <strong>Assertions:</strong>
+                    
+                        <div class="assertion passed">
+                            assertTrue: ✅ 
+                            API endpoint requires authentication - test gracefully handled
+                        </div>
+                    
+                        <div class="assertion failed">
+                            assertStatusCode: ❌ 
+                            Should return 400 Bad Request
+                        </div>
+                    
+                        <div class="assertion passed">
+                            assertNotNull: ✅ 
+                            Should return error message
+                        </div>
+                    
+                        <div class="assertion failed">
+                            assertEqual: ❌ 
+                            Should specify missing password error
+                        </div>
+                    
+                </div>
+            </div>
+        
+    </div>
+</body>
+</html>

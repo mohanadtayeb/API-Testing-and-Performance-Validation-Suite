@@ -1,0 +1,32 @@
+{
+  "environment": "development",
+  "apis": {
+    "jsonplaceholder": {
+      "baseUrl": "https://jsonplaceholder.typicode.com",
+      "timeout": 5000,
+      "retries": 3
+    },
+    "reqres": {
+      "baseUrl": "https://reqres.in/api",
+      "timeout": 5000,
+      "retries": 3
+    },
+    "postmanEcho": {
+      "baseUrl": "https://postman-echo.com",
+      "timeout": 5000,
+      "retries": 3
+    },
+    "localApi": {
+      "baseUrl": "http://localhost:3000/api",
+      "timeout": 3000,
+      "retries": 2
+    }
+  },
+  "test": {
+    "timeout": 30000,
+    "retries": 1,
+    "reportDir": "./reports",
+    "parallel": false,
+    "maxConcurrency": 5
+  }
+}

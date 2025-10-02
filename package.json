@@ -1,0 +1,78 @@
+{
+  "name": "api-testing-performance-suite",
+  "version": "1.0.0",
+  "description": "Comprehensive API Testing & Performance Validation Suite",
+  "main": "index.js",
+  "scripts": {
+    "test": "node framework/run-tests.js",
+    "test:framework": "node framework/run-tests.js",
+    "test:jsonplaceholder": "node framework/run-tests.js --tests jsonplaceholder",
+    "test:reqres": "node framework/run-tests.js --tests reqres",
+    "test:parallel": "node framework/run-tests.js --parallel",
+    "test:smoke": "node framework/run-tests.js --tags smoke",
+    "test:api": "node framework/run-tests.js --tags api",
+    "test:staging": "node framework/run-tests.js --env staging",
+    "test:prod": "node framework/run-tests.js --env prod",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "newman:jsonplaceholder": "newman run postman/collections/jsonplaceholder-api.json -e postman/environments/test.json --reporters htmlextra --reporter-htmlextra-export reports/newman-jsonplaceholder.html",
+    "newman:reqres": "newman run postman/collections/reqres-api.json -e postman/environments/test.json --reporters htmlextra --reporter-htmlextra-export reports/newman-reqres.html",
+    "newman:data-driven": "newman run postman/collections/data-driven-tests.json -d postman/data/test-data.csv --reporters htmlextra --reporter-htmlextra-export reports/newman-data-driven.html",
+    "performance:k6": "\"C:/Program Files/k6/k6.exe\" run performance/k6/load-test.js",
+    "performance:k6-stress": "\"C:/Program Files/k6/k6.exe\" run performance/k6/stress-test.js",
+    "performance:k6-spike": "\"C:/Program Files/k6/k6.exe\" run performance/k6/spike-test.js",
+    "security:basic": "node security/basic-security-tests.js",
+    "start:api": "node framework/custom-api/server.js",
+    "test:all": "npm run test:framework && npm run newman:jsonplaceholder && npm run newman:reqres && npm run performance:k6",
+    "test:postman:all": "npm run newman:jsonplaceholder && npm run newman:reqres",
+    "test:load": "\"C:/Program Files/k6/k6.exe\" run performance/k6/load-test.js",
+    "test:stress": "\"C:/Program Files/k6/k6.exe\" run performance/k6/stress-test.js",
+    "test:spike": "\"C:/Program Files/k6/k6.exe\" run performance/k6/spike-test.js",
+    "test:performance": "npm run test:load",
+    "test:security": "npm run security:basic",
+    "reports:combine": "node scripts/combine-reports.js",
+    "setup": "npm install && node scripts/setup.js"
+  },
+  "keywords": [
+    "api-testing",
+    "performance-testing",
+    "newman",
+    "postman",
+    "k6",
+    "test-automation",
+    "quality-assurance"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "joi": "^17.11.0",
+    "uuid": "^9.0.1",
+    "dotenv": "^16.3.1",
+    "chalk": "^4.1.2",
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "newman": "^6.0.0",
+    "jest": "^29.7.0",
+    "@jest/globals": "^29.7.0",
+    "supertest": "^6.3.3",
+    "newman-reporter-htmlextra": "^1.23.1"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/api-testing-performance-suite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/api-testing-performance-suite/issues"
+  },
+  "homepage": "https://github.com/yourusername/api-testing-performance-suite#readme"
+}

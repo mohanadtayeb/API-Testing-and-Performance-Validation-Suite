@@ -1,0 +1,32 @@
+{
+  "environment": "staging",
+  "apis": {
+    "jsonplaceholder": {
+      "baseUrl": "https://jsonplaceholder.typicode.com",
+      "timeout": 5000,
+      "retries": 3
+    },
+    "reqres": {
+      "baseUrl": "https://reqres.in/api",
+      "timeout": 5000,
+      "retries": 3
+    },
+    "postmanEcho": {
+      "baseUrl": "https://postman-echo.com",
+      "timeout": 5000,
+      "retries": 3
+    },
+    "localApi": {
+      "baseUrl": "http://staging-api.example.com/api",
+      "timeout": 5000,
+      "retries": 3
+    }
+  },
+  "test": {
+    "timeout": 30000,
+    "retries": 2,
+    "reportDir": "./reports",
+    "parallel": true,
+    "maxConcurrency": 10
+  }
+}
