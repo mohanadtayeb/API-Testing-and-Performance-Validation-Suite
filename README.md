@@ -155,8 +155,6 @@ Test execution reports are generated in the `reports/` directory:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Contact
-
 ## 📞 Contact & Connect
 
 **Project Author**: Mohanad Tayeb  
