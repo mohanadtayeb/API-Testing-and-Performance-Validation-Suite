@@ -151,13 +151,9 @@ Test execution reports are generated in the `reports/` directory:
 4. Push to the branch
 5. Create a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 📞 Contact & Connect
 
 **Project Author**: Mohanad Tayeb  
 **Purpose**: Software Testing & QA Skills Demonstration  
-**LinkedIn**: [Connect with me](https://linkedin.com/in/your-profile)  
+**LinkedIn**: [Connect with me](https://www.linkedin.com/in/mohanad-tayeb-94a490159/)  
 **Portfolio**: [View more projects](https://mohanad-tayeb.netlify.app/)
